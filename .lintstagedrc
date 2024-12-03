@@ -7,6 +7,7 @@
   ],
   "*.ts?(x)": [
     "max lint --fix --eslint-only",
-    "prettier --cache --parser=typescript --write"
+    "prettier --cache --parser=typescript --write",
+    "eslint --ignore-pattern .umirc.ts --fix"
   ]
 }

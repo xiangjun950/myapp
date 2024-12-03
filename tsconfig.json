@@ -1,3 +1,14 @@
 {
-  "extends": "./src/.umi/tsconfig.json"
+  "extends": "./src/.umi/tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true, // 跳过库的类型检查，避免外部依赖报错
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"]
+    },
+
+    "jsx": "react-jsx", // 对于 React 17+，推荐使用 react-jsx
+    "types": ["node", "react", "react-dom"] // 包含 React 类型
+  }
 }
